@@ -1,0 +1,137 @@
+
+.btn-3,
+.btn-3 *,
+.btn-3 :after,
+.btn-3 :before,
+.btn-3:after,
+.btn-3:before {
+  border: 0 solid;
+  box-sizing: border-box;
+}
+.btn-3 {
+  -webkit-tap-highlight-color: transparent;
+  -webkit-appearance: button;
+  background-color: #000;
+  background-image: none;
+  color: #fff;
+  cursor: pointer;
+  font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
+    Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, sans-serif,
+    Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
+  font-size: 100%;
+  font-weight: 900;
+  line-height: 1.5;
+  margin: 0;
+  -webkit-mask-image: -webkit-radial-gradient(#000, #fff);
+  padding: 0;
+  text-transform: uppercase;
+}
+.btn-3:disabled {
+  cursor: default;
+}
+
+.btn-3:-moz-focusring {
+  outline: auto;
+}
+
+.btn-3 svg {
+  display: block;
+  vertical-align: middle;
+}
+
+.btn-3 [hidden] {
+  display: none;
+}
+
+.btn-3 {
+  border-radius: 99rem;
+  border-width: 2px;
+  overflow: hidden;
+  padding: 0.8rem 3rem;
+  position: relative;
+}
+.btn-3 span {
+  mix-blend-mode: difference;
+}
+.btn-3:before {
+  background: #fff;
+  content: "";
+  inset: 0;
+  position: absolute;
+  transform: translateY(var(--progress, -100%));
+  transition: transform 0.2s ease;
+  -webkit-transform: translateY(var(--progress, -100%));
+  -moz-transform: translateY(var(--progress, -100%));
+  -ms-transform: translateY(var(--progress, -100%));
+  -o-transform: translateY(var(--progress, -100%));
+  -webkit-transition: transform 0.2s ease;
+  -moz-transition: transform 0.2s ease;
+  -ms-transition: transform 0.2s ease;
+  -o-transition: transform 0.2s ease;
+}
+.btn-3.clicked:before {
+  --progress: 0;
+}
+
+
+/* old button layout */
+/* 
+button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: #1a1a1a;
+  cursor: pointer;
+  box-shadow: 0 9px #999;
+  -webkit-transition: border-color 0.25s;
+  -moz-transition: border-color 0.25s;
+  -ms-transition: border-color 0.25s;
+  -o-transition: border-color 0.25s;
+}
+
+button span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.button1 span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.button2 span:after {
+  content: '\00d7';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+button:hover span {
+  padding-right: 25px;
+}
+
+button:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+
+button:active {
+  background-color: #043506;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+  -webkit-transform: translateY(4px);
+  -moz-transform: translateY(4px);
+  -ms-transform: translateY(4px);
+  -o-transform: translateY(4px);
+} */
