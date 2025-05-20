@@ -1,35 +1,34 @@
 # ThreatHunter-AI (Spring 2025)
 
-Welcome to the **Cybersecurity Threat-Hunting AI** project! This repository contains the code and documentation for a machine learning and neural network-based threat-hunting system. This system proactively identifies cybersecurity threats within a network environment by analyzing network traffic, user behavior, and threat intelligence feeds. By combining traditional machine learning techniques with neural networks, the system aims to detect both known and novel threats in real time.
+Welcome to the **Cybersecurity Threat-Hunting AI** project! This repository contains the code for a network threat-hunting system. This system proactively identifies cybersecurity threats within your Local-Access-Network (LAN) by analyzing network traffic and predicting safety of the data being transfered in those packets through the usage of my pre-trained model (using AutoGluon). Training data is almost an even split between safe data captured using WireShark on my LAN and network anomalous data where I utilized hping3 to simulate ICMP flood attacks targeting a Windows machine from a Kali Linux machine.
 
 ## Table of Contents
 
 - [Project Overview](#project-overview)
 - [System Architecture](#system-architecture)
 - [Features](#features)
-- [Installation](#installation)
+- [Installation](#Installation)
 - [License](#license)
 
 ## Project Overview
 
-Cyber threats are increasingly complex, and traditional cybersecurity measures alone often fall short. This project leverages a hybrid approach, combining machine learning (ML) and deep learning models, to enhance cybersecurity threat detection. The system can proactively hunt for threats by analyzing network traffic patterns and recognizing suspicious behaviors before they become critical. 
+This project leverages a pre-trained model to enhance cybersecurity threat detection. The system can proactively hunt for threats by analyzing network traffic patterns and recognizing suspicious behaviors before they become critical. 
 
-The project uses a layered, modular design for easy scalability and adaptability, and it includes data ingestion, anomaly detection, contextual analysis, and visualization components.
+The project has a simple design structure for easy scalability and adaptability, and it includes data ingestion, anomaly detection, and visualization components.
 
 ## System Architecture
 
 The system is divided into three main components:
 
-1. **Data Processing and Management**: Responsible for data collection, preprocessing, and storage. It aggregates data from sources such as network logs and threat intelligence feeds.
-2. **Threat Analysis Engine**: Combines traditional ML models for anomaly detection with neural network models for context-based threat analysis. This engine detects anomalies and generates potential threat scenarios.
-3. **User Interface Control**: Provides an interactive dashboard with real-time alerts, metrics, and data visualizations for cybersecurity analysts.
+1. **Data Processing and Management**: Responsible for data collection, preprocessing, and storage. It aggregates data from sources such as network logs actively scraped through WireShark.
+2. **Threat Analysis Engine**: This engine detects anomalies and generates potential threat reports, urging the user to then further investigate due to suspicious activity.
+3. **User Interface Control**: Provides a dashboard displaying anomalous/safe packets with real-time metrics.
 
 ## Features
 
 - **Real-Time Data Collection**: Ingests data from multiple sources and processes it for analysis.
-- **Anomaly Detection**: Uses machine learning to detect deviations from normal network behavior.
-- **Contextual Analysis**: Applies neural networks to evaluate anomalies within broader contexts.
-- **Threat Hypothesis Generation**: Constructs potential threat scenarios with probability scoring.
+- **Anomaly Detection**: Uses a pre-trained model to detect deviations from normal network behavior.
+- **Threat Hypothesis Generation**: Constructs threat probability scoring.
 - **Interactive Dashboard**: Displays real-time alerts and threat insights for analysts.
 
 ## Installation/Starting Up
