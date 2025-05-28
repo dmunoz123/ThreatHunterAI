@@ -1,5 +1,9 @@
 # ThreatHunter-AI (Spring 2025)
 
+### Work in Progress
+- Moving over to a browser extension as it feels more sensible for users to start/stop a chrome extension that checks their network traffic, saves it to their local computer for their own analysis if wanted, and if prompted to, will run my ML model on this network traffic file
+- Also gives me a chance to remove zombie/useless code!
+
 Welcome to the **Cybersecurity Threat-Hunting AI** project! This repository contains the code for a network threat-hunting system. This system proactively identifies cybersecurity threats within your Local-Access-Network (LAN) by analyzing network traffic and predicting safety of the data being transfered in those packets through the usage of my pre-trained model (using AutoGluon). Training data is almost an even split between safe data captured using WireShark on my LAN and network anomalous data where I utilized hping3 to simulate ICMP flood attacks targeting a Windows machine from a Kali Linux machine.
 
 ## Table of Contents
