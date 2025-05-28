@@ -51,7 +51,7 @@ capture_job = None
 def start_sniffing():
     global capture_job
     capture_job = PacketCapture(
-        interface=r'ciscodump',
+        interface=r'wlp0s20f3',
         socketio=socketio
     )
     socketio.start_background_task(capture_job.run)
