@@ -1,5 +1,8 @@
 # ThreatHunter-AI (Spring 2025)
 
+## Work in Progress
+- check out my branch **chrome_extension** for further detail
+
 Welcome to the **Cybersecurity Threat-Hunting AI** project! This repository contains the code for a network threat-hunting system. This system proactively identifies cybersecurity threats within your Local-Access-Network (LAN) by analyzing network traffic and predicting safety of the data being transfered in those packets through the usage of my pre-trained model (using AutoGluon). Training data is almost an even split between safe data captured using WireShark on my LAN and network anomalous data where I utilized hping3 to simulate ICMP flood attacks targeting a Windows machine from a Kali Linux machine.
 
 ## Table of Contents
