@@ -1,7 +1,6 @@
 from flask import Flask, jsonify
 from processing import PacketCapture
 from flask_socketio import SocketIO
-import boto3
 from concurrent.futures import ProcessPoolExecutor
 import pandas as pd
 # from autogluon.tabular import TabularPredictor
@@ -52,7 +51,7 @@ capture_job = None
 def start_sniffing():
     global capture_job
     capture_job = PacketCapture(
-        interface=r'\Device\NPF_{157D5AAE-90B3-486A-8885-3EC7BF71F825}',
+        interface=r'ciscodump',
         socketio=socketio
     )
     socketio.start_background_task(capture_job.run)
