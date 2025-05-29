@@ -46,9 +46,9 @@ The system is divided into three main components:
    python -m venv .venv 
 ```
 
-- Now that we have that setup we can begin installing our packages by running:
+- Now that we have that setup we can begin installing our packages by running (for now due to being a work in progress):
 ``` 
-   pip install -r requirements.txt 
+   pip install -r requirements1.txt 
 ```
 
 - Our backend is all setup for the code to recieve the correct packages, now we just navigate into our backend folder and boot up the server!

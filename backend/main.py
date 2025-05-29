@@ -3,23 +3,15 @@ from flask_app import app, socketio
 
 
 root = logging.getLogger()
+# Set the default logging level for the root logger
 root.setLevel(logging.INFO)
+# Create a FileHandler to write log messages to a file
 file_h = logging.FileHandler("myapp.log", mode="a")
 file_h.setLevel(logging.INFO)
-file_h.setFormatter(logging.Formatter("%(asctime)s %(levelname)s %(message)s"))
-
-# # Monkey‑patch its emit method so we always flush
-# _orig_emit = file_h.emit
-
-# def emit_and_flush(record):
-#     _orig_emit(record)
-#     file_h.flush()
-
-
-# file_h.emit = emit_and_flush
-
-# root.addHandler(file_h)
-
+# log timestamp, logging level, log record name, and log message
+formatter = logging.Formatter("%(asctime)s %(levelname)s [%(name)s] %(message)s")
+file_h.setFormatter(formatter)
+root.addHandler(file_h)
 logger = logging.getLogger(__name__)
 
 if __name__ == "__main__":
